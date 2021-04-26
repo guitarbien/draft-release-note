@@ -1,0 +1,19 @@
+name: 'draft note releaser'
+description: 'create a github draft release note from the repo project'
+inputs:
+  branch-name:  # id of input
+    description: 'branch name in the repo, e.g. feature/new-login-page'
+    required: true
+  project-column-name:  # id of input
+    description: 'the column name in the github projects, e.g. stage'
+    required: true
+  release-tag:  # id of input
+    description: 'the git tag for the draft release, e.g. v1.0.0'
+    required: true
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'node12'
+  main: 'index.js'
+
